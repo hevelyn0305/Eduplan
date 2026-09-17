@@ -146,6 +146,65 @@ e atualizada em todos os lugares que a usam*/
    border-color: var(--verde-escuro);
 }
 
+/* Estilos para o botão hamburguer */
+
+.hamburguer {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-actions {
+    display: none;
+}
+
+    @media (max-width: 768px) {
+    .hamburguer {
+        display: block;
+    }
+
+    .actions {
+      display: none;
+      /*  os botoes  */
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+
+        position: absolute;
+        top:100%;
+        left: 0;
+        right: 0;
+        background: var(--cor-fundo);
+        border-bottom:  1px solid var(--cor-borda);
+        padding: 16px 24px;
+        gap: 16px;
+    }
+
+    /* Classe que o JavaScript vai adicionar/remover para mostrar o menu */
+    .nav.ativo {
+        display: flex;
+    }
+
+    .nav-actions {
+        display: flex;
+        gap: 12px;
+        margin-top: 8px;
+        border-top: 1px solid var(--cor-borda);
+        padding-top: 16px;
+        width: 100%;
+    }
+
+    .nav-actions .btn {
+      flex: 1;
+      /* os botoes ocupam o mesmo espaço */
+    }
+}
+
 
 
 
